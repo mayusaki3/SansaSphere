@@ -18,6 +18,8 @@ SansaSphere は、Project Sansa における共通バックエンド基盤サー
 - ログ・監査
 - API基盤
 - テスト基盤
+- VN3 license 管理
+- governance / provenance 管理
 
 SansaSphere は、XR Runtime やゲームエンジン本体ではなく、
 Project Sansa 全体を支えるバックエンド・サービス基盤を責務とする。
@@ -37,6 +39,9 @@ SansaSphere の目的は、Project Sansa 全体で利用可能な共通バック
 - 共通監査・ロギング
 - 共通テスト基盤
 - 運用・監視基盤の統一
+- 権利違反防止
+- ライセンス整合性維持
+- provenance / governance 管理
 
 ## 責務
 
@@ -78,6 +83,16 @@ SansaSphere の目的は、Project Sansa 全体で利用可能な共通バック
 - Monitoring
 - Metrics
 - Traceability
+
+### ライセンス・権利管理
+
+- VN3 license 管理
+- Rights metadata 管理
+- License validation
+- Provenance tracking
+- Governance policy enforcement
+- Asset usage visibility
+- Federation policy coordination
 
 ### テスト基盤
 
@@ -122,6 +137,8 @@ SansaSphere の目的は、Project Sansa 全体で利用可能な共通バック
 - テスト仕様
 - サーバー仕様
 - 運用仕様
+- governance / provenance 仕様
+- VN3 license 仕様
 
 現在は要点整理段階のため、目次から各詳細ドキュメントへのリンクは作成しない。
 
