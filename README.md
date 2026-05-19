@@ -19,6 +19,8 @@ SansaSphere では、XR runtime に依存しない ecosystem-level service infra
 - economy
 - federation identity
 - usage visibility
+- governance
+- federation trust
 
 ---
 
@@ -33,6 +35,8 @@ SansaSphere は、ProjectSansa ecosystem 全体で共通利用される user / a
 - SansaVRM-Studio-AI
 - SansaCloth
 
+また、複数人が構築した SansaSphere 間で、audit / provenance / verification を共有できる federation trust 基盤を目指します。
+
 ---
 
 # repository federation
@@ -44,25 +48,69 @@ ProjectSansa
 └─ repository map
 
 SansaSphere
+├─ federation hub
+├─ repository coordination
+├─ common specifications
+└─ ecosystem governance
+
+SansaSphere-Auth
 ├─ account
 ├─ authentication
-├─ profile
+└─ identity
+
+SansaSphere-Audit
 ├─ audit
+├─ moderation trace
+└─ operation trace
+
+SansaSphere-Logging
 ├─ logging
+├─ distributed trace
+└─ event collection
+
+SansaSphere-Provenance
 ├─ provenance
-├─ analytics
-└─ economy
+├─ ownership trace
+├─ creator history
+└─ conversion history
 
-SansaXR
-├─ XR runtime
-├─ networking
-└─ OpenXR
+SansaSphere-Analytics
+├─ dashboard
+├─ creator analytics
+├─ usage analytics
+└─ activity visibility
 
-SansaVRM
-├─ avatar format
-├─ validator
-└─ adapters
+SansaSphere-Economy
+├─ economy
+├─ asset usage
+├─ transaction trace
+└─ ownership management
+
+SansaSphere-Federation
+├─ federation trust
+├─ signed event
+├─ verification
+└─ distributed trust
 ```
+
+---
+
+# federation trust
+
+SansaSphere では、改ざん検出や distributed trust を目的として、以下のような federation trust を扱う。
+
+- signed audit event
+- hash chain
+- distributed verification
+- provenance verification
+- ownership verification
+- distributed timestamp
+
+全文ログ共有ではなく、以下を中心とする。
+
+- hash
+- signature
+- minimal metadata
 
 ---
 
@@ -103,4 +151,7 @@ SansaSphere は ecosystem-level infrastructure として扱う。
 - 仕様・テスト・コードの Traceability を重視
 - ecosystem-level infrastructure を主責務とする
 - runtime implementation を直接保持しない
+- monorepo 化を避ける
+- repository federation を前提とする
 - audit / provenance / governance を重視する
+- federation trust を重視する
